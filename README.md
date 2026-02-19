@@ -54,7 +54,7 @@ stick-hero/
 | High score | `// Todo` comment | ✅ Saved to localStorage |
 | Touch support | ❌ Mouse only | ✅ touchstart / touchend added |
 | Typography | Segoe UI | Bangers + DM Sans |
-| Day badge | ❌ | ✅ Day 9 / 30 |
+
 
 ## 🛠️ Tech Stack
 
@@ -64,5 +64,3 @@ stick-hero/
 - No frameworks, no dependencies
 
 ---
-
-Original game concept by [Hunor Borbely](https://twitter.com/HunorBorbely)
