@@ -1,17 +1,19 @@
-# 🎮 Stick Hero — Day 9 of 30
+# Stick Hero 
 
 A JavaScript + HTML Canvas implementation of the classic Stick Hero game.
 
 ![Stick Hero Live Preview](live.png)
 
-## 🕹️ How to Play
+Play it here : https://holdd-bysush.vercel.app/
+
+## How to Play
 
 - **Hold** the mouse button (or tap and hold on mobile) to stretch the stick
 - **Release** to drop it — if it reaches the next platform you move forward
 - Hit the **red zone** in the center for **double score!**
 - Press **Space** to restart at any time
 
-## 🚀 Running the Game
+## Running the Game
 
 Because this project uses ES Modules, you need to serve it over HTTP (not open as a file directly).
 
@@ -30,7 +32,7 @@ python3 -m http.server 8080
 
 Then open `http://localhost:8080` in your browser.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 stick-hero/
@@ -45,7 +47,7 @@ stick-hero/
     └── game.js       # Game loop, physics, events
 ```
 
-## ✨ Improvements over original CodePen
+## Improvements over original CodePen
 
 | Feature | Original | This version |
 |---|---|---|
@@ -56,7 +58,7 @@ stick-hero/
 | Typography | Segoe UI | Bangers + DM Sans |
 
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Vanilla JavaScript** (ES2022+, ES Modules)
 - **HTML Canvas API**
