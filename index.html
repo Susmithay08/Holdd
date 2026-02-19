@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stick Hero</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <canvas id="game" width="375" height="375"></canvas>
+
+
+
+    <div id="score-wrapper">
+      <div id="score">0</div>
+      <div id="high-score-label">Best</div>
+      <div id="high-score">0</div>
+    </div>
+
+    <div id="introduction">Hold down to stretch the stick!</div>
+    <div id="perfect">DOUBLE SCORE!</div>
+    <button id="restart">RESTART</button>
+  </div>
+
+  <script type="module">
+    import { initGame, animate } from "./js/game.js";
+
+    const canvas = document.getElementById("game");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    initGame(canvas, {
+      introduction: document.getElementById("introduction"),
+      perfect: document.getElementById("perfect"),
+      restart: document.getElementById("restart"),
+      score: document.getElementById("score"),
+      highScore: document.getElementById("high-score"),
+    });
+
+    window.requestAnimationFrame(animate);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=DM+Sans:wght@400;600;900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Score display */
+#score-wrapper {
+  position: absolute;
+  top: 24px;
+  right: 30px;
+  text-align: right;
+}
+
+#score {
+  font-family: "Bangers", cursive;
+  font-size: 3em;
+  letter-spacing: 2px;
+  color: #2d2d2d;
+  line-height: 1;
+}
+
+#high-score-label {
+  font-size: 0.65em;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+#high-score {
+  font-family: "Bangers", cursive;
+  font-size: 1.4em;
+  color: #e05c2a;
+  letter-spacing: 1px;
+}
+
+/* Introduction text */
+#introduction {
+  width: 200px;
+  position: absolute;
+  font-weight: 600;
+  font-size: 0.85em;
+  color: #3a3a3a;
+  text-align: center;
+  line-height: 1.5;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255,255,255,0.8);
+  transition: opacity 2s ease;
+  pointer-events: none;
+}
+
+/* Perfect flash */
+#perfect {
+  position: absolute;
+  top: 40%;
+  font-family: "Bangers", cursive;
+  font-size: 2.5em;
+  letter-spacing: 4px;
+  color: #e05c2a;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.15);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Restart button */
+#restart {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  border-radius: 50%;
+  color: white;
+  background: linear-gradient(145deg, #e05c2a, #c0392b);
+  border: none;
+  font-family: "Bangers", cursive;
+  font-size: 1.4em;
+  letter-spacing: 2px;
+  display: none;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(192, 57, 43, 0.5), 0 2px 0 rgba(0,0,0,0.2);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#restart:hover {
+  transform: scale(1.06) translateY(-2px);
+  box-shadow: 0 10px 30px rgba(192, 57, 43, 0.5);
+}
+
+#restart:active {
+  transform: scale(0.97);
+}
+
+/* New high score glow on restart button */
+#restart[data-new-high-score="true"]::after {
+  content: "NEW BEST!";
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Bangers", cursive;
+  font-size: 0.7em;
+  letter-spacing: 2px;
+  color: #e05c2a;
+  white-space: nowrap;
+  animation: pulse 0.8s infinite alternate;
+}
+
+@keyframes pulse {
+  from { opacity: 0.7; transform: translateX(-50%) scale(1); }
+  to   { opacity: 1;   transform: translateX(-50%) scale(1.08); }
+}
+
+/* Day badge */
+#day-badge {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: #2d2d2d;
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 900;
+  font-size: 0.7em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* Canvas */
+#game {
+  display: block;
+}
